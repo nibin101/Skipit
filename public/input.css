@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+body{
+    @apply flex flex-col justify-center items-center;
+}
+
+
+.weekday{
+    @apply w-[40px] h-[40px] rounded-full border-0 bg-transparent text-white hover:bg-[hsl(261deg_80%_48%)] hover:shadow-[0_0_10px_hsl(261deg_80%_48%)];
+    
+}
+
+.calendar{
+    @apply text-gray-500 w-[15em] h-[40px] bg-black border-0 rounded-[5px] pr-[10px];
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    @apply bg-[#878787] rounded-full;
+  }
+
+
+.calendar-label{
+    @apply text-white text-2xl font-sans;
+}
+
+.input{
+    @apply w-[40em] h-[40px] rounded-[30px] border-0 outline-none bg-black text-white p-[2px] text-[14px] pl-[20px];
+}
+
+.input::placeholder{
+    padding-left:20px;
+}
+
+
+.submit-btn, .back {
+    @apply px-[40px] py-[17px] rounded-[50px] cursor-pointer border-0 text-black bg-white shadow-[0_0_8px_rgba(0,0,0,0.05)] tracking-[1.5px] uppercase text-[15px] transition-all duration-500 ease-in-out;
+  }
+  
+  .submit-btn:hover, .back:hover {
+    @apply tracking-[3px] bg-[hsl(261deg_80%_48%)] text-[hsl(0,_0%,_100%)] shadow-[0px_7px_29px_0px_rgb(93,24,220)];
+  }
+  
+  .submit-btn:active, .back:active {
+    @apply tracking-[3px] bg-[hsl(261deg_80%_48%)] text-[hsl(0,_0%,_100%)] shadow-[0_0_0_0_rgb(93,24,220)] transform translate-y-[10px] transition-all duration-[100ms];
+  }
+  
